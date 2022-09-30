@@ -1,11 +1,19 @@
-import './index.css';
+import Map from "./components/Map";
+import "./index.css";
+
 
 function App() {
+
+
+
   return (
-    <div className="App">
-      hello world
-    </div>
+    <>
+      <div className="App">
+        <Map />
+      </div>
+    </>
   );
 }
+
 
 export default App;
