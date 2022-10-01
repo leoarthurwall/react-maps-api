@@ -7,11 +7,20 @@
     width: 100%;
     background-color: #282828;
 }
+.menu-title-container{
+    display: flex;
+
+}
 .header-title {
-    padding-left: 2rem;
     margin: 0;
     font-size: 1.4rem;
     color: white;
+}
+.menu-icon {
+    height: 24px;
+    width: 24px;
+    color: white;
+    padding: 0 25px;
 }
 .search-container {
     display: flex;
