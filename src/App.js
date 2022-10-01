@@ -1,6 +1,7 @@
 import Header from "./components/Header/Header";
 import Map from "./components/Map/Map";
 import { useState } from "react";
+import List from "./components/List/List";
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <>
       <div className="App">
         <Header isMenuClicked={isMenuClicked} setIsMenuClicked={setIsMenuClicked} />
+        { isMenuClicked && ( <List /> )}
         <Map />
       </div>
     </>
