@@ -8,7 +8,7 @@ const Header = () => {
       <div className="search-container">
         <h3 className="search-title">Expore new Places</h3>
         <form className="input-form">
-          <input className="input-box" type="input" placeholder="search for places" />
+          <input className="input-box" type="input" placeholder="Search" />
           <MagnifyingGlassIcon className="search-icon"/>
         </form>
       </div>
