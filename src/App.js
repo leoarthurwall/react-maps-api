@@ -12,7 +12,7 @@ function App() {
       <div className="App">
         <Header isMenuClicked={isMenuClicked} setIsMenuClicked={setIsMenuClicked} />
         { isMenuClicked && ( <List /> )}
-        <Map />
+        {/* <Map /> */}
       </div>
     </>
   );

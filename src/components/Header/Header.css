@@ -7,9 +7,6 @@
     width: 100%;
     background-color: #282828;
 }
-.list-menu-wrapper{
-    position:relative;
-}
 .menu-title-container{
     display: flex;
 
