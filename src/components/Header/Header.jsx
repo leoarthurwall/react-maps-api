@@ -1,27 +1,22 @@
-import { useState } from "react";
 import {
   Bars3Icon,
   MagnifyingGlassIcon,
   XMarkIcon,
 } from "@heroicons/react/24/solid";
 import "./Header.css";
-import List from "../List/List";
 
-const Header = () => {
-  const [isClicked, setIsClicked] = useState(false);
+
+const Header = ({isMenuClicked, setIsMenuClicked}) => {
 
   const handleClick = () => {
-    setIsClicked(!isClicked);
+    setIsMenuClicked(!isMenuClicked);
   };
 
   return (
     <div className="header-container">
       <div className="menu-title-container">
-        {isClicked ? (
-          <div className="list-menu-wrapper">
-            <XMarkIcon onClick={handleClick} className="menu-icon" />
-            <List />
-          </div>
+        {isMenuClicked ? (
+          <XMarkIcon onClick={handleClick} className="menu-icon" />
         ) : (
           <Bars3Icon onClick={handleClick} className="menu-icon" />
         )}
