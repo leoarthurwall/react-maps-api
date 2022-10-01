@@ -1,5 +1,3 @@
-import Map from "./components/Map";
-import "./index.css";
 
 
 function App() {
@@ -9,7 +7,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <Map />
+       <h1> Hello World</h1>
       </div>
     </>
   );
