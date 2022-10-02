@@ -6,6 +6,8 @@
     height: 70px;
     width: 100%;
     background-color: #282828;
+    transition: 1s;
+    left: 0;
 }
 .menu-title-container{
     display: flex;
