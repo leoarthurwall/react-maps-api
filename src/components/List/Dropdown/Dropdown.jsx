@@ -2,10 +2,17 @@ import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 import "./Dropdown.css";
 
-const Dropdown = ({ title, listItems }) => {
+const Dropdown = ({ title, listItems, state, setState }) => {
   const [isDropdownClicked, setIsDropdownClicked] = useState(false);
+  const [type, setType] = useState('Resturants')
 
-  console.log(listItems);
+
+  const handleClick = (e) => {
+    e.preventDefault()
+    setType(e.target.getAttribute('value'))
+    console.log('e.t', e.target.getAttribute('value'))
+    console.log('type',type)
+  }
 
   const handleDropdown = () => {
     setIsDropdownClicked(!isDropdownClicked);
@@ -23,13 +30,14 @@ const Dropdown = ({ title, listItems }) => {
         </div>
         {isDropdownClicked && (
           <div className="select-list-container">
-            <ul className="select-list">
+            <ul className="select-list" value={type} onClick={handleClick}>
               {listItems.map((listItem, index) => {
-                return <ol className="select-list-item">{listItem}</ol>;
+                console.log('listItem', listItem)
+                return <ol className="select-list-item" key={index} value={listItem.name}>{listItem.name}</ol>;
               })}
             </ul>
           </div>
-        )}
+        )}x
       </div>
     </form>
   );
