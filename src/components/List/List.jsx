@@ -19,8 +19,8 @@ const List = () => {
     { name: "about 4.5" },
   ];
 
-  console.log('type', type)
-  console.log('rating', rating)
+  console.log('type:', type)
+  console.log('rating:', rating)
   return (
     <>
       <div className="list-container">
