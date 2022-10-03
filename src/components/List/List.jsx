@@ -1,13 +1,9 @@
-import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
-import { useState } from "react";
+
+import Dropdown from "./Dropdown/Dropdown";
 import "./List.css";
 
 const List = () => {
-  const [isDropdownClicked, setIsDropdownClicked] = useState(false);
-
-  const handleDropdown = () => {
-    setIsDropdownClicked(!isDropdownClicked);
-  };
+  
 
   return (
     <>
@@ -15,27 +11,7 @@ const List = () => {
         <h4 className="list-header">
           Resturants, Hotels & Attractions around you
         </h4>
-        <form className="type-form">
-          <div className="select-container-wrapper">
-            <div className="select-container" onClick={handleDropdown}>
-              <p className="select-header-text">Type</p>
-              {isDropdownClicked ? (
-                <ChevronUpIcon className="select-arrow" />
-              ) : (
-                <ChevronDownIcon className="select-arrow" />
-              )}
-            </div>
-            {isDropdownClicked && (
-              <div className="select-list-container">
-                <ul className="select-list">
-                  <ol className="select-list-item">Resturants</ol>
-                  <ol className="select-list-item">Hotels</ol>
-                  <ol className="select-list-item">Amusements</ol>
-                </ul>
-              </div>
-            )}
-          </div>
-        </form>
+        <Dropdown />
       </div>
       <div className="list-overlay"></div>
     </>
