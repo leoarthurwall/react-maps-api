@@ -25,7 +25,11 @@
 .type-dropdown {
     width:40%;
 } */
-
+.select-container-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
 .select-container {
   height: auto;
   width: fit-content;
@@ -65,4 +69,10 @@
 .select-list-item {
   padding: 0%;
   color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.select-list-item:hover {
+color: aqua;
 }

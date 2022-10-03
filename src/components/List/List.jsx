@@ -16,16 +16,18 @@ const List = () => {
             <option value="resturants">Resturants</option>
             <option value="attractions">Attractions</option>
           </select> */}
-          <div className="select-container">
-            <p className="select-header-text">Type</p>
-            <ChevronDownIcon className="select-arrow" />
-          </div>
-          <div className="select-list-container">
-            <ul className="select-list">
-              <ol className="select-list-item">Resturants</ol>
-              <ol className="select-list-item">Hotels</ol>
-              <ol className="select-list-item">Amusements</ol>
-            </ul>
+          <div className="select-container-wrapper"> 
+            <div className="select-container">
+              <p className="select-header-text">Type</p>
+              <ChevronDownIcon className="select-arrow" />
+            </div>
+            <div className="select-list-container">
+              <ul className="select-list">
+                <ol className="select-list-item">Resturants</ol>
+                <ol className="select-list-item">Hotels</ol>
+                <ol className="select-list-item">Amusements</ol>
+              </ul>
+            </div>
           </div>
         </form>
       </div>
