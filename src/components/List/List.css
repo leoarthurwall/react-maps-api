@@ -19,4 +19,9 @@
   color: white;
   font-weight: 400;
 }
+.dropdown-container {
+  display: flex;
+  align-items:flex-start;
+  gap: 2rem;
+}
 
