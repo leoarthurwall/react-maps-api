@@ -18,6 +18,9 @@ const List = () => {
     { name: "about 4.0" },
     { name: "about 4.5" },
   ];
+
+  console.log('type', type)
+  console.log('rating', rating)
   return (
     <>
       <div className="list-container">
@@ -28,15 +31,15 @@ const List = () => {
           <Dropdown
             title={"Type"}
             listItems={typeList}
-            type={type}
-            setType={setType}
+            state={type}
+            setState={setType}
           />
 
           <Dropdown
             title={"Rating"}
             listItems={ratingList}
-            rating={rating}
-            setRating={setRating}
+            state={rating}
+            setState={setRating}
           />
         </div>
       </div>
