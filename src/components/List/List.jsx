@@ -1,8 +1,14 @@
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import React from "react";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
+import { useState } from "react";
 import "./List.css";
 
 const List = () => {
+  const [isDropdownClicked, setIsDropdownClicked] = useState(false);
+
+  const handleDropdown = () => {
+    setIsDropdownClicked(!isDropdownClicked);
+  };
+
   return (
     <>
       <div className="list-container">
@@ -10,24 +16,24 @@ const List = () => {
           Resturants, Hotels & Attractions around you
         </h4>
         <form className="type-form">
-          {/* <select name="type" className="type-dropdown">
-            <option value="hotels" disabled selected hidden>Type</option>
-            <option value="hotels">Hotels</option>
-            <option value="resturants">Resturants</option>
-            <option value="attractions">Attractions</option>
-          </select> */}
-          <div className="select-container-wrapper"> 
-            <div className="select-container">
+          <div className="select-container-wrapper">
+            <div className="select-container" onClick={handleDropdown}>
               <p className="select-header-text">Type</p>
-              <ChevronDownIcon className="select-arrow" />
+              {isDropdownClicked ? (
+                <ChevronUpIcon className="select-arrow" />
+              ) : (
+                <ChevronDownIcon className="select-arrow" />
+              )}
             </div>
-            <div className="select-list-container">
-              <ul className="select-list">
-                <ol className="select-list-item">Resturants</ol>
-                <ol className="select-list-item">Hotels</ol>
-                <ol className="select-list-item">Amusements</ol>
-              </ul>
-            </div>
+            {isDropdownClicked && (
+              <div className="select-list-container">
+                <ul className="select-list">
+                  <ol className="select-list-item">Resturants</ol>
+                  <ol className="select-list-item">Hotels</ol>
+                  <ol className="select-list-item">Amusements</ol>
+                </ul>
+              </div>
+            )}
           </div>
         </form>
       </div>
