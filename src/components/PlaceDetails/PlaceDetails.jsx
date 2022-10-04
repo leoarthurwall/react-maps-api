@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import "../List/List.css";
 
-const PlaceDetails = () => {
+const PlaceDetails = ({place}) => {
   return (
-    <div>PlaceDetails</div>
-  )
-}
+        <h3 className="card-header">{place.name}</h3>
+  );
+};
 
-export default PlaceDetails
+export default PlaceDetails;

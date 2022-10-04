@@ -1,6 +1,7 @@
 import Dropdown from "./Dropdown/Dropdown";
 import { useState } from "react";
 import "./List.css";
+import PlaceDetails from "../PlaceDetails/PlaceDetails";
 
 const List = () => {
   const [type, setType] = useState("Resturants");
@@ -52,8 +53,8 @@ const List = () => {
         </div>
         <div className="card-section-container">
           {Places?.map((place, index) => (
-            <div className="card-component">
-              <h3 className="card-header">{place.name}</h3>
+            <div className="card-component" key={index}>
+              <PlaceDetails  place={place} />
             </div>
           ))}
         </div>
