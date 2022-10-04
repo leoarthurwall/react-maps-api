@@ -19,6 +19,15 @@ const List = () => {
     { name: "about 4.5" },
   ];
 
+  const Places = [
+    {name: "Place 1"},
+    {name: "Place 2"},
+    {name: "Place 3"},
+    {name: "Place 4"},
+    {name: "Place 5"},
+  ]
+  
+
   console.log('type:', type)
   console.log('rating:', rating)
   return (
