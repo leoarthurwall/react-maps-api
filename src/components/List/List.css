@@ -25,3 +25,11 @@
   gap: 2rem;
 }
 
+.card-section-container{
+  width: 100%;
+  border: 2px solid red;
+}
+.card-header {
+  color:white;
+}
+

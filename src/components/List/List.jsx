@@ -20,16 +20,15 @@ const List = () => {
   ];
 
   const Places = [
-    {name: "Place 1"},
-    {name: "Place 2"},
-    {name: "Place 3"},
-    {name: "Place 4"},
-    {name: "Place 5"},
-  ]
-  
+    { name: "Place 1" },
+    { name: "Place 2" },
+    { name: "Place 3" },
+    { name: "Place 4" },
+    { name: "Place 5" },
+  ];
 
-  console.log('type:', type)
-  console.log('rating:', rating)
+  console.log("type:", type);
+  console.log("rating:", rating);
   return (
     <>
       <div className="list-container">
@@ -51,13 +50,15 @@ const List = () => {
             setState={setRating}
           />
         </div>
-      </div>
-      <div className="list-overlay"></div>
-      <div className="card-section-container">
-        <div className="card-component">
-          <h3 className="card-header"></h3>
+        <div className="card-section-container">
+          {Places?.map((place, index) => (
+            <div className="card-component">
+              <h3 className="card-header">{place.name}</h3>
+            </div>
+          ))}
         </div>
       </div>
+      <div className="list-overlay"></div>
     </>
   );
 };
