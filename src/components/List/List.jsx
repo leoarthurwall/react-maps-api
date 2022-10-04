@@ -53,6 +53,11 @@ const List = () => {
         </div>
       </div>
       <div className="list-overlay"></div>
+      <div className="card-section-container">
+        <div className="card-component">
+          <h3 className="card-header"></h3>
+        </div>
+      </div>
     </>
   );
 };
