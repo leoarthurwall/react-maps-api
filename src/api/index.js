@@ -6,7 +6,7 @@ const URL =
 export const getPlacesData = async (sw, ne) => {
   try {
     const {
-      data: { data }
+      data: { data },
     } = await axios.get(URL, {
       params: {
         bl_latitude: sw.lat,

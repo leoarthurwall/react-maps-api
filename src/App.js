@@ -8,7 +8,7 @@ function App() {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
   const [places, setPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
-  const [bounds, setBounds] = useState({lat: 51.5072,lng:0.1276});
+  const [bounds, setBounds] = useState({ lat: 51.5072, lng: 0.1276 });
   // const [bounds, setBounds] = useState(null); original state, doesn't work - possible because wifi conmnection is so slow
 
   useEffect(() => {
@@ -34,7 +34,7 @@ function App() {
           isMenuClicked={isMenuClicked}
           setIsMenuClicked={setIsMenuClicked}
         />
-        {isMenuClicked && <List places={places}/>}
+        {isMenuClicked && <List places={places} />}
         <Map
           setCoordinates={setCoordinates}
           setBounds={setBounds}

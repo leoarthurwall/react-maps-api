@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./List.css";
 import PlaceDetails from "../PlaceDetails/PlaceDetails";
 
-const List = ({places}) => {
+const List = ({ places }) => {
   const [type, setType] = useState("Resturants");
   const [rating, setRating] = useState(5);
 
@@ -19,14 +19,6 @@ const List = ({places}) => {
     { name: "about 4.0" },
     { name: "about 4.5" },
   ];
-
-  // const Places = [
-  //   { name: "Place 1" },
-  //   { name: "Place 2" },
-  //   { name: "Place 3" },
-  //   { name: "Place 4" },
-  //   { name: "Place 5" },
-  // ];
 
   console.log("type:", type);
   console.log("rating:", rating);
@@ -54,7 +46,7 @@ const List = ({places}) => {
         <div className="card-section-container">
           {places?.map((place, index) => (
             <div className="card-component" key={index}>
-              <PlaceDetails  place={place} />
+              <PlaceDetails place={place} />
             </div>
           ))}
         </div>
