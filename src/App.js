@@ -8,7 +8,8 @@ function App() {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
   const [places, setPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
-  const [bounds, setBounds] = useState(null);
+  const [bounds, setBounds] = useState({lat: 51.5072,lng:0.1276});
+  // const [bounds, setBounds] = useState(null); original state, doesn't work - possible because wifi conmnection is so slow
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -19,9 +20,9 @@ function App() {
   }, []);
 
   useEffect(() => {
-    console.log(coordinates, bounds);
+    console.log("bounds:", bounds);
 
-    getPlacesData().then((data) => {
+    getPlacesData(bounds.sw, bounds.ne).then((data) => {
       console.log(data);
       setPlaces(data);
     });
