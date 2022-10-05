@@ -3,8 +3,6 @@ import GoogleMapReact from "google-map-react";
 import "./Map.css";
 
 const Map = ({ setCoordinates, setBounds, coordinates }) => {
-  
-
   return (
     <div className="map-container">
       <GoogleMapReact

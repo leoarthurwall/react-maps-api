@@ -11,13 +11,15 @@ function App() {
   const [bounds, setBounds] = useState(null);
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude} }) => {
-    setCoordinates({lat: latitude, lng: longitude})
-  })
-  }, [])
+    navigator.geolocation.getCurrentPosition(
+      ({ coords: { latitude, longitude } }) => {
+        setCoordinates({ lat: latitude, lng: longitude });
+      }
+    );
+  }, []);
 
   useEffect(() => {
-    console.log(coordinates, bounds)
+    console.log(coordinates, bounds);
 
     getPlacesData().then((data) => {
       console.log(data);
@@ -32,7 +34,7 @@ function App() {
           setIsMenuClicked={setIsMenuClicked}
         />
         {isMenuClicked && <List />}
-        <Map 
+        <Map
           setCoordinates={setCoordinates}
           setBounds={setBounds}
           coordinates={coordinates}
