@@ -7,6 +7,8 @@ import { getPlacesData } from "./api";
 function App() {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
   const [places, setPlaces] = useState([]);
+  const [coordinates, setCoordinates] = useState({});
+  const [bounds, setBounds] = useState(null);
 
   useEffect(() => {
     getPlacesData().then((data) => {
@@ -22,7 +24,11 @@ function App() {
           setIsMenuClicked={setIsMenuClicked}
         />
         {isMenuClicked && <List />}
-        <Map />
+        <Map 
+          setCoordinates={setCoordinates}
+          setBounds={setBounds}
+          coordinates={coordinates}
+        />
       </div>
     </>
   );

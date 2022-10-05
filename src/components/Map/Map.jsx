@@ -3,7 +3,7 @@ import GoogleMapReact from 'google-map-react'
 import './Map.css'
 
 
-const Map = () => {
+const Map = ({setCoordinates, setBounds, coordinates}) => {
 
 
     const defaultProps = {
@@ -24,7 +24,10 @@ const Map = () => {
        defaultZoom={defaultProps.zoom}
     //    margin={[50, 50, 50, 50]}
     //    options={''}
-    //    onChange={''}
+       onChange={(e) => {
+        console.log(e)
+        setCoordinates({lat: e.center.lat, lng: e.center.lng})
+       }}
     //    onChildClick={''}
     //    onChildMouseEnter={this.onChildMouseEnter}
     //    onChildMouseLeave={this.onChildMouseLeave}
