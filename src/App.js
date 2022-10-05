@@ -22,7 +22,7 @@ function App() {
           setIsMenuClicked={setIsMenuClicked}
         />
         {isMenuClicked && <List />}
-        {/* <Map /> */}
+        <Map />
       </div>
     </>
   );

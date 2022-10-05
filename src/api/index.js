@@ -11,14 +11,17 @@ const options = {
     tr_longitude: "109.149359",
   },
   headers: {
- 
+    "X-RapidAPI-Key": process.env.REACT_APP_RESTURANT_API_KEY,
+    "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
   },
 };
 
+console.log(process.env);
 export const getPlacesData = async () => {
   try {
     const {
-      data: { data } } = await axios.get(URL, options);
+      data: { data },
+    } = await axios.get(URL, options);
 
     return data;
   } catch (error) {
