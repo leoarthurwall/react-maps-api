@@ -34,7 +34,7 @@ function App() {
           isMenuClicked={isMenuClicked}
           setIsMenuClicked={setIsMenuClicked}
         />
-        {isMenuClicked && <List />}
+        {isMenuClicked && <List places={places}/>}
         <Map
           setCoordinates={setCoordinates}
           setBounds={setBounds}
