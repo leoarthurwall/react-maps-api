@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const getPlacesDara = async () => {
+const getPlacesData = async () => {
   try {
     const response = await axios.get()
   } catch (error) {

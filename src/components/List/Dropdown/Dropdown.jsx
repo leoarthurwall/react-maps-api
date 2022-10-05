@@ -41,7 +41,6 @@ const Dropdown = ({ title, listItems, state, setState }) => {
             </ul>
           </div>
         )}
-        x
       </div>
     </form>
   );
