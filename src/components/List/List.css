@@ -22,16 +22,13 @@
 }
 .dropdown-container {
   display: flex;
-  align-items:flex-start;
-  justify-content: center;
-  gap: 2.5rem;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .card-section-container{
   width: 100%;
-  border: 2px solid red;
   overflow: scroll;
-
 }
 .card-header {
   color:#000;
