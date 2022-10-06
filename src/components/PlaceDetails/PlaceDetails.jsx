@@ -7,7 +7,8 @@ import { InformationCircleIcon } from "@heroicons/react/24/outline";
 const PlaceDetails = ({ place }) => {
   console.log("place:", place);
   return (
-    <div className="place-container">
+    <>
+      {place.name ? ( <div className="place-container">
       <div className="place-left">
         <a className="place-url" href={place.website} target="blank">
           <h3 className="place-header">{place.name}</h3>
@@ -42,7 +43,9 @@ const PlaceDetails = ({ place }) => {
           />
         </a>
       </div>
-    </div>
+    </div>) : (null)}
+    </>
+   
   );
 };
 
