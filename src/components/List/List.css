@@ -1,5 +1,5 @@
 .list-container {
-  width: 240px;
+  width: 300px;
   height: 700px;
   background-color: #FCFCFC;
   display: flex;
@@ -23,12 +23,15 @@
 .dropdown-container {
   display: flex;
   align-items:flex-start;
-  gap: 2rem;
+  justify-content: center;
+  gap: 2.5rem;
 }
 
 .card-section-container{
   width: 100%;
   border: 2px solid red;
+  overflow: scroll;
+
 }
 .card-header {
   color:#000;
