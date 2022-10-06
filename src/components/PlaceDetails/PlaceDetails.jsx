@@ -28,16 +28,19 @@ const PlaceDetails = ({ place }) => {
             <p className="place-address">
               {place.parent_display_name} · {place.ranking_category}
             </p>
-            {/* {place.is_closed === true ? (<p className="place-closed">{place.open_now_text}</p>) : (<p className="place-open">{place.open_now_text}</p>)} */}
-
+            <p className="place-phone">{place.phone}</p>
             <p
               className="place-open"
-              style={place.is_closed === false ? { color: "green" } : { color: "red" }}
+              style={
+                place.open_now_text === "Open Now"
+                  ? { color: "green" }
+                  : place.open_now_text === "Closed Now"
+                  ? { color: "red" }
+                  : { color: "#717579" }
+              }
             >
               {place.open_now_text}
             </p>
-
-            <p className="place-phone">{place.phone}</p>
           </div>
           <div className="place-right">
             <a className="place-url" href={place.website} target="blank">
