@@ -14,10 +14,10 @@ const List = ({ places }) => {
   ];
   const ratingList = [
     { name: "All" },
-    { name: "about 3.0" },
-    { name: "about 3.5" },
-    { name: "about 4.0" },
-    { name: "about 4.5" },
+    { name: "Above 3.0" },
+    { name: "Above 3.5" },
+    { name: "Above 4.0" },
+    { name: "Above 4.5" },
   ];
 
   console.log("type:", type);

@@ -10,7 +10,7 @@
   width: 65%;
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
+  gap: 0.15rem;
 }
 .place-right {
   width: 35%;
