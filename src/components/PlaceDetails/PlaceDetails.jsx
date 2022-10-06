@@ -10,12 +10,15 @@ const PlaceDetails = ({ place }) => {
       <div className="place-left">
         <h3 className="place-header">{place.name}</h3>
         <div className="place-rating-price-container">
-          <p className="place-rating">{place.rating}</p>
+          <p className="place-rating-bold">{place.rating}</p>
           <StarIcon className="place-rating-icon" />
-          <p className="place-rating">{place.num_reviews}</p>
+          <p className="place-rating">({place.num_reviews})</p>
+          <p className="place-rating"> · </p>
           <p className="place-price">{place.price_level}</p>
         </div>
-        <p className="place-address">{place.address}</p>
+        <p className="place-address">
+          {place.parent_display_name} · {place.ranking_category}
+        </p>
 
         <p className="place-open">{place.open_now_text}</p>
         <p className="place-phone">{place.phone}</p>
