@@ -1,0 +1,17 @@
+.place-container {
+    display: flex;
+    align-items:flex-start;
+    width: 100%
+}
+.place-left{
+    width:65%;
+}
+.place-right {
+    width: 35%;
+}
+.card-image {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
