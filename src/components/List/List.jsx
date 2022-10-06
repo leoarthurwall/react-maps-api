@@ -51,7 +51,7 @@ const List = ({ places }) => {
           ))}
         </div>
       </div>
-      <div className="list-overlay"></div>
+      {/* <div className="list-overlay"></div> */}
     </>
   );
 };
