@@ -9,9 +9,51 @@
 .place-right {
     width: 35%;
 }
-.card-image {
+.place-image {
     height: 100px;
     width: 100px;
     object-fit: cover;
     border-radius: 5px;
 }
+.place-header{
+    margin: 0px;
+    font-size: 16px;
+}
+.place-address{
+ color:#717579;
+ margin: 0%;
+
+}
+.place-rating{
+    color:#717579;
+    margin: 0%;
+
+
+}
+.place-open{
+    color:#717579;
+    margin: 0%;
+
+
+}
+.place-phone{
+    color:#717579;
+    margin: 0%;
+
+
+}
+.place-price{
+    color:#717579;
+    margin: 0%;
+
+
+}
+.place-web{
+
+}
+.place-tripadv{
+
+}
+
+
+
