@@ -9,14 +9,14 @@ const PlaceDetails = ({ place }) => {
   return (
     <div className="place-container">
       <div className="place-left">
-        <a className="place-url" href={place.web_url} target="blank">
+        <a className="place-url" href={place.website} target="blank">
           <h3 className="place-header">{place.name}</h3>
         </a>
         <div className="place-rating-price-container">
           <p className="place-rating-bold">{place.rating}</p>
           <StarIcon className="place-rating-icon" />
           <p className="place-rating">({place.num_reviews})</p>
-          <a className="place-url-icon" href={place.website} target="blank">
+          <a className="place-url-icon" href={place.web_url} target="blank">
             <InformationCircleIcon className="place-info-icon" />
           </a>
           <p className="place-rating"> · </p>
@@ -30,7 +30,7 @@ const PlaceDetails = ({ place }) => {
         <p className="place-phone">{place.phone}</p>
       </div>
       <div className="place-right">
-        <a className="place-url" href={place.web_url} target="blank">
+        <a className="place-url" href={place.website} target="blank">
           <img
             className="place-image"
             src={
