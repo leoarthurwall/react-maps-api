@@ -1,11 +1,12 @@
 import React from "react";
 import "../List/List.css";
 import "./PlaceDetails.css";
-import { PhoneIcon, StarIcon } from "@heroicons/react/24/solid";
+import { StarIcon } from "@heroicons/react/24/solid";
 import { InformationCircleIcon } from "@heroicons/react/24/outline";
 
 const PlaceDetails = ({ place }) => {
   console.log("place:", place);
+
   return (
     <>
       {place.name ? (
@@ -27,8 +28,15 @@ const PlaceDetails = ({ place }) => {
             <p className="place-address">
               {place.parent_display_name} · {place.ranking_category}
             </p>
+            {/* {place.is_closed === true ? (<p className="place-closed">{place.open_now_text}</p>) : (<p className="place-open">{place.open_now_text}</p>)} */}
 
-            <p className="place-open">{place.open_now_text}</p>
+            <p
+              className="place-open"
+              style={place.is_closed === false ? { color: "green" } : { color: "red" }}
+            >
+              {place.open_now_text}
+            </p>
+
             <p className="place-phone">{place.phone}</p>
           </div>
           <div className="place-right">

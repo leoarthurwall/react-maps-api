@@ -52,10 +52,11 @@
   color: #f2bd42;
 }
 .place-open {
-  color: #717579;
-  margin: 0%;
+    color: #717579;
+    margin: 0%;
   font-size: 14px;
 }
+
 
 .place-phone {
   color: #717579;
