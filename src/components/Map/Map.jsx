@@ -6,6 +6,7 @@ const Map = ({ setCoordinates, setBounds, coordinates }) => {
   return (
     <div className="map-container">
       <GoogleMapReact
+      className="map-google"
         bootstrapURLKeys={{ key: process.env.REACT_APP_MAP_API_KEY }}
         defaultCenter={coordinates}
         center={coordinates}
