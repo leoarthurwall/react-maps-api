@@ -11,7 +11,7 @@ const Map = ({ setCoordinates, setBounds, coordinates }) => {
         defaultCenter={coordinates}
         center={coordinates}
         defaultZoom={14}
-        //    margin={[50, 50, 50, 50]}
+           margin={[50, 50, 50, 50]}
         //    options={''}
         onChange={(e) => {
           console.log(e);
