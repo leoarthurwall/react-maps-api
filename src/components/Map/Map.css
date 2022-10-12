@@ -6,31 +6,8 @@
   height: 90%;
   background-color: antiquewhite;
 }
-.marker-container {
-  height:fit-content;
-  width: 70px;
-  background-color: white;
-  padding: 0.3rem;
-  border: 1px solid rgba(113, 117, 121, 0.1);
-  position: relative;
-}
-.marker-container:hover {
-    z-index: 10;
-}
-/* .map-pin-icon{
-    height:30px;
-    width: 30px;
-    color: #AB3F32;
-} */
-.place-image-marker {
-  width: 70px;
-  height: 70px;
-  object-fit: cover;
-}
-.place-title-marker {
-    margin:0;
-}
-.reviews-container-marker{
-    display: flex;
-    align-items: center;
+
+.map-card-container{
+    height: 100%;
+    width: 100%;
 }

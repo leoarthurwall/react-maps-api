@@ -1,7 +1,7 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
 import "./Map.css";
-import { MapPinIcon, StarIcon } from "@heroicons/react/24/solid";
+import MapCard from "./MapCard/MapCard";
 
 const Map = ({ setCoordinates, setBounds, coordinates, places }) => {
   return (
@@ -23,28 +23,14 @@ const Map = ({ setCoordinates, setBounds, coordinates, places }) => {
         //    onChildMouseEnter={this.onChildMouseEnter}
         //    onChildMouseLeave={this.onChildMouseLeave}
       >
-        {places?.map((place, i) => (
+        {places?.map((place, index) => (
           <div
             className="marker-container"
             lat={Number(place.latitude)}
             lng={Number(place.longitude)}
-            key={i}
+            key={index}
           >
-            <h4 className="place-title-marker">{place.name}</h4>
-            <img
-              className="place-image-marker"
-              src={
-                place.photo
-                  ? place.photo.images.small.url
-                  : "http://www.resto.be/across/resources/static/site/images/placeholder-detail-resto.jpg"
-              }
-              alt="place"
-            />
-            <div className="reviews-container-marker">
-              <p className="place-rating-bold">{place.rating}</p>
-              <StarIcon className="place-rating-icon" />
-            </div>
-            {/* <MapPinIcon className="map-pin-icon"/> */}
+            <MapCard place={place} />
           </div>
         ))}
       </GoogleMapReact>
