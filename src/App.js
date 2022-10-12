@@ -9,7 +9,6 @@ function App() {
   const [places, setPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState({});
-  // const [bounds, setBounds] = useState(null); //original state, doesn't work - possible because wifi conmnection is so slow
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(

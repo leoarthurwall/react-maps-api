@@ -63,14 +63,4 @@ const PlaceDetails = ({ place }) => {
 
 export default PlaceDetails;
 
-/*
-Inclide in the card
-- Title DONE
-- Rating (score and number of reviews) DONE
-- Price range DONE
-- type (resturant, takeaway)
-- open/closed
-- image
-- website 
-- tripadvisor
-*/
+
