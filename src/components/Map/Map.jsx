@@ -2,7 +2,7 @@ import React from "react";
 import GoogleMapReact from "google-map-react";
 import "./Map.css";
 
-const Map = ({ setCoordinates, setBounds, coordinates }) => {
+const Map = ({ setCoordinates, setBounds, coordinates, places }) => {
   return (
     <div className="map-container">
       <GoogleMapReact
