@@ -24,7 +24,6 @@ const Map = ({ setCoordinates, setBounds, coordinates, places }) => {
         //    onChildMouseEnter={this.onChildMouseEnter}
         //    onChildMouseLeave={this.onChildMouseLeave}
       >
-      <SearchAreaButton />
         {places?.map((place, index) => (
           <div
             className="marker-container"

@@ -1,6 +1,9 @@
 .search-area-button{
+    position: absolute;
+    left: 45vw;
+    top: 100px;
     width: fit-content;
-    border-radius: 25px;
+    border-radius: 15px;
     padding: 0.6rem 1rem;
     display: flex;
     flex-direction: row;

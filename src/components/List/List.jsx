@@ -2,7 +2,6 @@ import Dropdown from "./Dropdown/Dropdown";
 import { useState } from "react";
 import "./List.css";
 import PlaceDetails from "../PlaceDetails/PlaceDetails";
-
 const List = ({ places }) => {
   const [type, setType] = useState("Resturants");
   const [rating, setRating] = useState(5);

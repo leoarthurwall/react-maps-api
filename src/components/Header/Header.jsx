@@ -3,6 +3,7 @@ import {
   MagnifyingGlassIcon,
   XMarkIcon,
 } from "@heroicons/react/24/solid";
+import SearchAreaButton from "../SearchAreaButton/SearchAreaButton";
 import "./Header.css";
 
 
@@ -30,6 +31,7 @@ const Header = ({isMenuClicked, setIsMenuClicked}) => {
           <MagnifyingGlassIcon className="search-icon" />
         </form>
       </div>
+      <SearchAreaButton />
     </div>
   );
 };
