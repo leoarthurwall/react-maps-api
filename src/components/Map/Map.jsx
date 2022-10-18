@@ -2,6 +2,7 @@ import React from "react";
 import GoogleMapReact from "google-map-react";
 import "./Map.css";
 import MapCard from "./MapCard/MapCard";
+import SearchAreaButton from "../SearchAreaButton/SearchAreaButton"
 
 const Map = ({ setCoordinates, setBounds, coordinates, places }) => {
   return (
@@ -23,6 +24,7 @@ const Map = ({ setCoordinates, setBounds, coordinates, places }) => {
         //    onChildMouseEnter={this.onChildMouseEnter}
         //    onChildMouseLeave={this.onChildMouseLeave}
       >
+      <SearchAreaButton />
         {places?.map((place, index) => (
           <div
             className="marker-container"
