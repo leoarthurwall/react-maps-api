@@ -2,7 +2,6 @@ import React from "react";
 import GoogleMapReact from "google-map-react";
 import "./Map.css";
 import MapCard from "./MapCard/MapCard";
-import SearchAreaButton from "../SearchAreaButton/SearchAreaButton"
 
 const Map = ({ setCoordinates, setBounds, coordinates, places }) => {
   return (

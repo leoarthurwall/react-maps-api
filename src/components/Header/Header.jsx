@@ -7,7 +7,7 @@ import SearchAreaButton from "../SearchAreaButton/SearchAreaButton";
 import "./Header.css";
 
 
-const Header = ({isMenuClicked, setIsMenuClicked}) => {
+const Header = ({isMenuClicked, setIsMenuClicked, handleSearchAreaClick}) => {
 
   const handleClick = () => {
     setIsMenuClicked(!isMenuClicked);
@@ -31,7 +31,7 @@ const Header = ({isMenuClicked, setIsMenuClicked}) => {
           <MagnifyingGlassIcon className="search-icon" />
         </form>
       </div>
-      <SearchAreaButton />
+      <SearchAreaButton handleSearchAreaClick={handleSearchAreaClick}/>
     </div>
   );
 };
