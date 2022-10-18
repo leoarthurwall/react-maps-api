@@ -18,15 +18,18 @@ function App() {
     );
   }, []);
 
-  useEffect(() => {
-    console.log("coordinates:", coordinates, "bounds:", bounds);
+    useEffect(() => {
+      console.log("coordinates:", coordinates, "bounds:", bounds);
 
-    getPlacesData(bounds.sw, bounds.ne).then((data) => {
-      console.log(data);
-      setPlaces(data);
-    });
-  }, []);
-// }, [coordinates, bounds]);
+      getPlacesData(bounds.sw, bounds.ne).then((data) => {
+        console.log(data);
+        setPlaces(data);
+      });
+    }, [coordinates, bounds]);
+  //   const handleSearchAreaClick = () => {
+
+  // };
+
   return (
     <>
       <div className="App">
