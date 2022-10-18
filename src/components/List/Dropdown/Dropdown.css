@@ -16,6 +16,8 @@
     gap: 1rem;
     position: relative;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
   }
   .select-header-text {
     color: white;
@@ -35,7 +37,8 @@
     background-color: #646464;
     position: absolute;
     top: 40px;
-   
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
   }
   .select-list {
     list-style: none;
