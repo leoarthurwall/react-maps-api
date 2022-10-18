@@ -12,6 +12,10 @@
     background-color: white;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+.search-area-button:hover{
+    background-color: #f0f0f0;
 }
 
 .search-area-icon {
