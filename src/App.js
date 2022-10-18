@@ -25,7 +25,8 @@ function App() {
       console.log(data);
       setPlaces(data);
     });
-  }, [coordinates, bounds]);
+  }, []);
+// }, [coordinates, bounds]);
   return (
     <>
       <div className="App">
