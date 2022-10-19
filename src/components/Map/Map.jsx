@@ -3,7 +3,7 @@ import GoogleMapReact from "google-map-react";
 import "./Map.css";
 import MapCard from "./MapCard/MapCard";
 
-const Map = ({ setCoordinates, setBounds, coordinates, places }) => {
+const Map = ({ setCoordinates, setBounds, coordinates, places, setChildClicked }) => {
   return (
     <div className="map-container">
       <GoogleMapReact
@@ -19,7 +19,7 @@ const Map = ({ setCoordinates, setBounds, coordinates, places }) => {
           setCoordinates({ lat: e.center.lat, lng: e.center.lng });
           setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw });
         }}
-        //    onChildClick={''}
+        onChildClick={(child) => setChildClicked(child)}
         //    onChildMouseEnter={this.onChildMouseEnter}
         //    onChildMouseLeave={this.onChildMouseLeave}
       >

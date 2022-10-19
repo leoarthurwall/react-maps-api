@@ -9,6 +9,8 @@ function App() {
   const [places, setPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState({});
+  const [clildClicked, setChildClicked] = useState(null)
+
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -49,6 +51,7 @@ function App() {
           setBounds={setBounds}
           coordinates={coordinates}
           places={places}
+          setChildClicked={setChildClicked}
         />
       </div>
     </>
