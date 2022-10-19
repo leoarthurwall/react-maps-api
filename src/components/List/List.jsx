@@ -64,7 +64,7 @@ const List = ({ places, childClicked }) => {
               className="card-component"
               key={index}
             >
-              <PlaceDetails place={place} />
+              <PlaceDetails place={place} selected={Number(childClicked) === index} refProp={elementRefs[index]}/>
             </div>
           ))}
         </div>

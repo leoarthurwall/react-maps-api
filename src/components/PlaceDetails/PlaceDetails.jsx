@@ -4,7 +4,7 @@ import "./PlaceDetails.css";
 import { StarIcon } from "@heroicons/react/24/solid";
 import { InformationCircleIcon } from "@heroicons/react/24/outline";
 
-const PlaceDetails = ({ place }) => {
+const PlaceDetails = ({ place, selected, refProp }) => {
   console.log("place:", place);
 
   return (
