@@ -1,23 +1,9 @@
 import Dropdown from "./Dropdown/Dropdown";
-import { useState, useEffect, useRef, createRef } from "react";
 import "./List.css";
 import PlaceDetails from "../PlaceDetails/PlaceDetails";
 
-const List = ({ places, childClicked, type, setType, rating, setRating }) => {
-  //state contains all the references
-  const [elementRefs, setElementRefs] = useState([]);
+const List = ({ places, type, setType, rating, setRating }) => {
 
-  // this runs everytime the places[] state changes. it makes a new array using the paces.length and then maps over it and returns an element ref or creats a new ref.
-  useEffect(() => {
-    const refs = Array(places?.length) // array constructor of places.length
-      .fill() // fills the array
-      .map((_, i) => elementRefs[i] || createRef()); // map over the array. _ neans this paramater isn't needed, only the index in this case. => then return elementRefs[i] or create a ref
-
-    setElementRefs(refs);
-  }, [places]);
-
-  console.log({ childClicked });
-  console.log({ elementRefs });
 
   const typeList = [
     { name: "Hotels" },
@@ -60,8 +46,6 @@ const List = ({ places, childClicked, type, setType, rating, setRating }) => {
             <div className="card-component" key={index}>
               <PlaceDetails
                 place={place}
-                selected={Number(childClicked) === index}
-                refProp={elementRefs[index]}
               />
             </div>
           ))}

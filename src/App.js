@@ -10,7 +10,7 @@ function App() {
   const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState({});
   const [childClicked, setChildClicked] = useState(null);
-  const [type, setType] = useState("Resturants");
+  const [type, setType] = useState("Restaurants");
   const [rating, setRating] = useState(5);
 
   useEffect(() => {
