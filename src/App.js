@@ -9,8 +9,7 @@ function App() {
   const [places, setPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState({});
-  const [clildClicked, setChildClicked] = useState(null)
-
+  const [childClicked, setChildClicked] = useState(null);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -20,21 +19,22 @@ function App() {
     );
   }, []);
 
-    // useEffect(() => {
-    //   console.log("coordinates:", coordinates, "bounds:", bounds);
+  // useEffect(() => {
+  //   console.log("coordinates:", coordinates, "bounds:", bounds);
 
-    //   getPlacesData(bounds.sw, bounds.ne).then((data) => {
-    //     console.log(data);
-    //     setPlaces(data);
-    //   });
-    // }, [coordinates, bounds]);
-    const handleSearchAreaClick = () => {
-      console.log("coordinates:", coordinates, "bounds:", bounds);
+  //   getPlacesData(bounds.sw, bounds.ne).then((data) => {
+  //     console.log(data);
+  //     setPlaces(data);
+  //   });
+  // }, [coordinates, bounds]);
 
-      getPlacesData(bounds.sw, bounds.ne).then((data) => {
-        console.log(data);
-        setPlaces(data);
-      });
+  const handleSearchAreaClick = () => {
+    console.log("coordinates:", coordinates, "bounds:", bounds);
+
+    getPlacesData(bounds.sw, bounds.ne).then((data) => {
+      console.log(data);
+      setPlaces(data);
+    });
   };
 
   return (
@@ -45,7 +45,7 @@ function App() {
           isMenuClicked={isMenuClicked}
           setIsMenuClicked={setIsMenuClicked}
         />
-        {isMenuClicked && <List places={places} />}
+        {isMenuClicked && <List places={places} childClicked={childClicked} />}
         <Map
           setCoordinates={setCoordinates}
           setBounds={setBounds}
