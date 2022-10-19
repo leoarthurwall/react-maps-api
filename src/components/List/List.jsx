@@ -3,9 +3,8 @@ import { useState, useEffect, useRef, createRef } from "react";
 import "./List.css";
 import PlaceDetails from "../PlaceDetails/PlaceDetails";
 
-const List = ({ places, childClicked }) => {
-  const [type, setType] = useState("Resturants");
-  const [rating, setRating] = useState(5);
+const List = ({ places, childClicked, type, setType, rating, setRating }) => {
+  
 
   //state contains all the references
   const [elementRefs, setElementRefs] = useState([]);

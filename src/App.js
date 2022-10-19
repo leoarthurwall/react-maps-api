@@ -10,6 +10,8 @@ function App() {
   const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState({});
   const [childClicked, setChildClicked] = useState(null);
+  const [type, setType] = useState("Resturants");
+  const [rating, setRating] = useState(5);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -45,7 +47,7 @@ function App() {
           isMenuClicked={isMenuClicked}
           setIsMenuClicked={setIsMenuClicked}
         />
-        {isMenuClicked && <List places={places} childClicked={childClicked} />}
+        {isMenuClicked && <List type={type} setType={setType} rating={rating} setRating={setRating} places={places} childClicked={childClicked} />}
         <Map
           setCoordinates={setCoordinates}
           setBounds={setBounds}
