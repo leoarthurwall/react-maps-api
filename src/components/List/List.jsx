@@ -21,7 +21,7 @@ const List = ({ places, childClicked, type, setType, rating, setRating }) => {
 
   const typeList = [
     { name: "Hotels" },
-    { name: "Resturants" },
+    { name: "Restaurants" },
     { name: "Attractions" },
   ];
   const ratingList = [

@@ -1,10 +1,9 @@
 import axios from "axios";
 
-// const URL =
-//   "https://travel-dvisor.p.rapidapi.com/restaurants/list-in-boundary";
 
 export const getPlacesData = async (type, sw, ne) => {
-  const URL = `https://travel-dvisor.p.rapidapi.com/${type}/list-in-boundary`;
+  // const URL = `https://travel-dvisor.p.rapidapi.com/${type}/list-in-boundary`;
+  const URL = "https://travel-dvisor.p.rapidapi.com/attractions/list-in-boundary";
   try {
     const {
       data: { data },
@@ -22,7 +21,10 @@ export const getPlacesData = async (type, sw, ne) => {
     });
 
     return data;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (err) {
+    console.error("Error response:");
+    console.error(err.response.data);    // ***
+    console.error(err.response.status);  // ***
+    console.error(err.response.headers); // ***
+  } 
 };
