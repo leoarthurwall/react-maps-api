@@ -4,8 +4,6 @@ import "./List.css";
 import PlaceDetails from "../PlaceDetails/PlaceDetails";
 
 const List = ({ places, childClicked, type, setType, rating, setRating }) => {
-  
-
   //state contains all the references
   const [elementRefs, setElementRefs] = useState([]);
 
@@ -19,7 +17,7 @@ const List = ({ places, childClicked, type, setType, rating, setRating }) => {
   }, [places]);
 
   console.log({ childClicked });
-  console.log({elementRefs})
+  console.log({ elementRefs });
 
   const typeList = [
     { name: "Hotels" },

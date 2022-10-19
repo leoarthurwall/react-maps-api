@@ -28,12 +28,12 @@ function App() {
   //     console.log(data);
   //     setPlaces(data);
   //   });
-  // }, [coordinates, bounds]);
+  // }, [type, coordinates, bounds]);
 
   const handleSearchAreaClick = () => {
     console.log("coordinates:", coordinates, "bounds:", bounds);
-
-    getPlacesData(bounds.sw, bounds.ne).then((data) => {
+    console.log("type:", type)
+    getPlacesData(type, bounds.sw, bounds.ne).then((data) => {
       console.log(data);
       setPlaces(data);
     });
