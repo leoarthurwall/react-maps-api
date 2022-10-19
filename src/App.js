@@ -9,7 +9,6 @@ function App() {
   const [places, setPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState({});
-  const [childClicked, setChildClicked] = useState(null);
   const [type, setType] = useState("Restaurants");
   const [rating, setRating] = useState(5);
 
@@ -32,7 +31,7 @@ function App() {
 
   const handleSearchAreaClick = () => {
     console.log("coordinates:", coordinates, "bounds:", bounds);
-    console.log("type:", type)
+    console.log("type:", type);
     getPlacesData(type, bounds.sw, bounds.ne).then((data) => {
       console.log(data);
       setPlaces(data);
@@ -47,13 +46,20 @@ function App() {
           isMenuClicked={isMenuClicked}
           setIsMenuClicked={setIsMenuClicked}
         />
-        {isMenuClicked && <List type={type} setType={setType} rating={rating} setRating={setRating} places={places} childClicked={childClicked} />}
+        {isMenuClicked && (
+          <List
+            type={type}
+            setType={setType}
+            rating={rating}
+            setRating={setRating}
+            places={places}
+          />
+        )}
         <Map
           setCoordinates={setCoordinates}
           setBounds={setBounds}
           coordinates={coordinates}
           places={places}
-          setChildClicked={setChildClicked}
         />
       </div>
     </>
