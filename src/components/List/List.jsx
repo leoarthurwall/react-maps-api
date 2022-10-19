@@ -1,5 +1,5 @@
 import Dropdown from "./Dropdown/Dropdown";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./List.css";
 import PlaceDetails from "../PlaceDetails/PlaceDetails";
 
@@ -7,7 +7,9 @@ const List = ({ places, childClicked }) => {
   const [type, setType] = useState("Resturants");
   const [rating, setRating] = useState(5);
 
-  console.log("childClicked :", childClicked);
+
+  
+  console.log({childClicked});
 
   const typeList = [
     { name: "Hotels" },
