@@ -5,7 +5,10 @@ import { StarIcon } from "@heroicons/react/24/solid";
 import { InformationCircleIcon } from "@heroicons/react/24/outline";
 
 const PlaceDetails = ({ place, selected, refProp }) => {
-  console.log("place:", place);
+  console.log("place:", place.location_id);
+
+  if (selected)
+    refProp?.current?.scrollIntoView({ behaviour: "smooth", block: "start" });
 
   return (
     <>
@@ -62,5 +65,3 @@ const PlaceDetails = ({ place, selected, refProp }) => {
 };
 
 export default PlaceDetails;
-
-

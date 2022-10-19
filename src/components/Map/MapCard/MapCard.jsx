@@ -1,7 +1,6 @@
 import React from "react";
-import { MapPinIcon, StarIcon } from "@heroicons/react/24/solid";
+import { StarIcon } from "@heroicons/react/24/solid";
 import "./MapCard.css";
-import PlaceDetails from "../../PlaceDetails/PlaceDetails";
 
 const MapCard = ({ place }) => {
   return (
