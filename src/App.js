@@ -62,14 +62,14 @@ function App() {
             setType={setType}
             rating={rating}
             setRating={setRating}
-            places={places}
+            places={filteredPlaces.length ? (filteredPlaces) : (places)}
           />
         )}
         <Map
           setCoordinates={setCoordinates}
           setBounds={setBounds}
           coordinates={coordinates}
-          places={places}
+          places={filteredPlaces.length ? (filteredPlaces) : (places)}
         />
       </div>
     </>
