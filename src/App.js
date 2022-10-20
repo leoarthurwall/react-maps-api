@@ -7,11 +7,13 @@ import { getPlacesData } from "./api";
 function App() {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
   const [places, setPlaces] = useState([]);
+  const [filteredPlaces, setFilteredPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState({});
   const [type, setType] = useState("Restaurants");
   const [rating, setRating] = useState(5);
 
+  // sets the current position for google maps api
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       ({ coords: { latitude, longitude } }) => {
@@ -29,6 +31,7 @@ function App() {
   //   });
   // }, [type, coordinates, bounds]);
 
+  // gets the places data from the travel advisor api based on the current bounds - actioned upon button click
   const handleSearchAreaClick = () => {
     console.log("coordinates:", coordinates, "bounds:", bounds);
     console.log("type:", type);
@@ -37,6 +40,13 @@ function App() {
       setPlaces(data);
     });
   };
+
+  // filters through the places and returns the place if it's rating is greater than the selected rating. Updates the filteredplaces state.
+  useEffect(() => {
+    const filteredPlaces = places.filter((place) => place.rating > rating)
+
+    setFilteredPlaces(filteredPlaces)
+  }, [rating])
 
   return (
     <>

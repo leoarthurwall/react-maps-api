@@ -5,9 +5,12 @@
     padding: 0.3rem;
     border: 1px solid rgba(113, 117, 121, 0.1);
     position: relative;
+
   }
   .marker-container:hover {
       z-index: 10;
+
+
   }
   /* .map-pin-icon{
       height:30px;
