@@ -48,25 +48,13 @@ function App() {
 
   
   // filters through the places and returns the place if it's rating is greater than the selected rating. Updates the filteredplaces state.
-  // useEffect(() => {
-  //   const filteredPlaces = places.filter((place) => place.rating > rating)
-
-  //   setFilteredPlaces(filteredPlaces)
-  // }, [rating])
-
-
-
-  const handleRatingClick = () => {
+  useEffect(() => {
     const filteredPlaces = places.filter((place) => place.rating > rating)
 
-    getPlacesData(type, bounds.sw, bounds.ne).then((data) => {
-      console.log(data);
-      setPlaces(data);
-      setFilteredPlaces(filteredPlaces)
-      console.log(filteredPlaces)
-      console.log("rating clicked")
-    });  }
-    
+    setFilteredPlaces(filteredPlaces)
+  }, [rating])
+
+
  
 
   return (
@@ -84,7 +72,6 @@ function App() {
             rating={rating}
             setRating={setRating}
             places={filteredPlaces.length ? (filteredPlaces) : (places)}
-            handleRatingClick={handleRatingClick}
           />
         )}
         <Map
