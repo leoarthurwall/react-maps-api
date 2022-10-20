@@ -5,7 +5,9 @@ import { StarIcon } from "@heroicons/react/24/solid";
 import { InformationCircleIcon } from "@heroicons/react/24/outline";
 
 const PlaceDetails = ({ place }) => {
-  console.log("place:", place.location_id);
+  // console.log("place:", place.location_id);
+  // console.log("place:", place);
+
 
  
 

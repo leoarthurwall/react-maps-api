@@ -28,9 +28,13 @@ function App() {
   //   getPlacesData(bounds.sw, bounds.ne).then((data) => {
   //     console.log(data);
   //     setPlaces(data);
+  //     setFilteredPlaces([])
+
+  
   //   });
   // }, [type, coordinates, bounds]);
 
+  
   // gets the places data from the travel advisor api based on the current bounds - actioned upon button click
   const handleSearchAreaClick = () => {
     console.log("coordinates:", coordinates, "bounds:", bounds);
@@ -38,15 +42,31 @@ function App() {
     getPlacesData(type, bounds.sw, bounds.ne).then((data) => {
       console.log(data);
       setPlaces(data);
+      // setFilteredPlaces([])
     });
   };
 
+  
   // filters through the places and returns the place if it's rating is greater than the selected rating. Updates the filteredplaces state.
-  useEffect(() => {
+  // useEffect(() => {
+  //   const filteredPlaces = places.filter((place) => place.rating > rating)
+
+  //   setFilteredPlaces(filteredPlaces)
+  // }, [rating])
+
+
+
+  const handleRatingClick = () => {
     const filteredPlaces = places.filter((place) => place.rating > rating)
 
-    setFilteredPlaces(filteredPlaces)
-  }, [rating])
+    getPlacesData(type, bounds.sw, bounds.ne).then((data) => {
+      console.log(data);
+      setPlaces(data);
+      setFilteredPlaces(filteredPlaces)
+      console.log(filteredPlaces)
+    });  }
+    
+ 
 
   return (
     <>
@@ -63,6 +83,7 @@ function App() {
             rating={rating}
             setRating={setRating}
             places={filteredPlaces.length ? (filteredPlaces) : (places)}
+            handleRatingClick={handleRatingClick}
           />
         )}
         <Map
