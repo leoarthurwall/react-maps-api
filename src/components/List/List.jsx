@@ -2,7 +2,7 @@ import Dropdown from "./Dropdown/Dropdown";
 import "./List.css";
 import PlaceDetails from "../PlaceDetails/PlaceDetails";
 
-const List = ({ places, type, setType, rating, setRating, handleRatingClick }) => {
+const List = ({ places, type, setType, rating, setRating }) => {
 
 
   const typeList = [
@@ -11,11 +11,11 @@ const List = ({ places, type, setType, rating, setRating, handleRatingClick }) =
     { name: "Attractions", value: "Attractions" },
   ];
   const ratingList = [
-    { name: "All", value: "0" },
-    { name: "Above 3.0", value: "3" },
-    { name: "Above 3.5", value: "3.5" },
-    { name: "Above 4.0", value: "4"  },
-    { name: "Above 4.5", value: "4.5"  },
+    { name: "All", value: 0 },
+    { name: "Above 3.0", value: 3 },
+    { name: "Above 3.5", value: 3.5 },
+    { name: "Above 4.0", value: 4 },
+    { name: "Above 4.5", value: 4.5 },
   ];
 
   console.log("type:", type);
@@ -30,15 +30,14 @@ const List = ({ places, type, setType, rating, setRating, handleRatingClick }) =
           <Dropdown
             title={"Type"}
             listItems={typeList}
-            state={type}
+            state={type.value}
             setState={setType}
           />
 
           <Dropdown
-            handleRatingClick={handleRatingClick}
             title={"Rating"}
             listItems={ratingList}
-            state={rating}
+            state={rating.value}
             setState={setRating}
           />
         </div>

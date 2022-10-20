@@ -2,7 +2,7 @@ import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 import "./Dropdown.css";
 
-const Dropdown = ({ title, listItems, state, setState, handleRatingClick }) => {
+const Dropdown = ({ title, listItems, state, setState }) => {
   const [isDropdownClicked, setIsDropdownClicked] = useState(false);
 
   const handleClick = (e) => {
@@ -12,6 +12,7 @@ const Dropdown = ({ title, listItems, state, setState, handleRatingClick }) => {
 
   const handleDropdown = () => {
     setIsDropdownClicked(!isDropdownClicked);
+
   };
   return (
     <form className="type-form">
@@ -26,13 +27,13 @@ const Dropdown = ({ title, listItems, state, setState, handleRatingClick }) => {
         </div>
         {isDropdownClicked && (
           <div className="select-list-container">
-            <ul className="select-list" value={state} onClick={handleClick} handleRatingClick={handleRatingClick}>
+            <ul className="select-list" value={state} onClick={handleClick} >
               {listItems.map((listItem, index) => {
                 return (
                   <ol
                     className="select-list-item"
                     key={index}
-                    value={listItem.name}
+                    value={listItem.value}
                   >
                     {listItem.name}
                   </ol>

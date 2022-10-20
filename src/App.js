@@ -64,6 +64,7 @@ function App() {
       setPlaces(data);
       setFilteredPlaces(filteredPlaces)
       console.log(filteredPlaces)
+      console.log("rating clicked")
     });  }
     
  
